@@ -6,6 +6,8 @@
 
 using namespace std;
 
+const string end_line = "\r\n";
+
 void get_URL(const string &host, const string &path) {
     // Your code here.
 
@@ -17,8 +19,23 @@ void get_URL(const string &host, const string &path) {
     // (not just one call to read() -- everything) until you reach
     // the "eof" (end of file).
 
-    cerr << "Function called: get_URL(" << host << ", " << path << ").\n";
-    cerr << "Warning: get_URL() has not been implemented yet.\n";
+    TCPSocket sock;
+    sock.connect(Address(host, "http"));
+    sock.write("GET " + path + " HTTP/1.1" + end_line);
+    sock.write("Host: " + host + end_line);
+    sock.write("Connection: close" + end_line);
+    sock.write(end_line);
+
+    string recvd;
+    while (!sock.eof()) {
+        recvd += sock.read();
+    }
+    cout << recvd;
+
+    sock.close();
+
+    // cerr << "Function called: get_URL(" << host << ", " << path << ").\n";
+    // cerr << "Warning: get_URL() has not been implemented yet.\n";
 }
 
 int main(int argc, char *argv[]) {
