@@ -12,7 +12,7 @@
 
 using namespace std;
 
-ByteStream::ByteStream(const size_t capacity) : _capacity(capacity) { }
+ByteStream::ByteStream(const size_t capacity) : _capacity(capacity) {}
 
 size_t ByteStream::write(const string &data) {
     size_t len = data.size();

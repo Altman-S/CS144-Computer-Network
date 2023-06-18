@@ -1,19 +1,19 @@
 Lab 0 Writeup
 =============
 
-My name: [your name here]
+My name: Pai
 
-My SUNet ID: [your sunetid here]
+My SUNet ID: s2154448
 
 I collaborated with: [list sunetids here]
 
-This lab took me about [n] hours to do. I [did/did not] attend the lab session.
+This lab took me about 2 hours to do. I did not attend the lab session.
 
 My secret code from section 2.1 was: [code here]
 
-- Optional: I had unexpected difficulty with: [describe]
+- Optional: I had unexpected difficulty with: GDB debug
 
-- Optional: I think you could make this lab better by: [describe]
+- Optional: I think you could make this lab better by: provide some advice for us about how to use debugging tools
 
 - Optional: I was surprised by: [describe]
 
